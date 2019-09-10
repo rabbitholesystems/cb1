@@ -1,0 +1,86 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body {margin:20px 20px 0;overflow-x:hidden;overflow-y:auto;font-family:sans-serif}
+        
+        .inptext {width:100%;font-size:17px;letter-spacing:1px;border:none;padding:10px;border:rgba(127, 127, 127, 0.32) 1px solid;box-sizing:border-box;}
+
+        button {
+            width: 55px;
+            height: 50px;
+            line-height: 1;
+            display: inline-block;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            background-color: #fff;
+            color: #4a4a4a;
+            border: 1px solid transparent;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            font-size: 12px;
+            font-weight: normal;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            border-radius: 0;
+            transition: all ease 0.3s           
+            }
+        
+        button.classic-primary {
+            display: inline-block;
+            width: auto;
+            height: 50px;
+            padding-left: 10px;
+            padding-right: 10px;
+            min-width: 135px;
+            background: #f7f7f7;
+            border:rgba(127, 127, 127, 0.32) 1px solid;
+        }
+        
+        .inptext:focus {outline:none}
+        button:focus {outline:none;}
+    </style>
+</head>
+<body>
+
+<textarea id="txtFootnote" tabindex="1" class="inptext" style="height:270px;" ></textarea>
+
+<div style="text-align:right;margin-top:5px;">
+    <button class="input-apply classic-primary">Update Footnote</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    var nReplaceCount = 0;
+ 
+    jQuery(document).ready(function () {
+
+        var $footnote = parent.jQuery("#divFootnoteTool").data('active');
+        jQuery('#txtFootnote').val(decodeURIComponent($footnote.attr('data-footnote')));
+
+        jQuery('#txtFootnote').focus();
+
+        jQuery('.input-apply').click(function () {
+
+            var sFootnote = jQuery('#txtFootnote').val();
+
+            $footnote.attr('data-footnote',encodeURIComponent(sFootnote));
+
+            jQuery('#txtFootnote').val('');
+
+            var $modal = parent.jQuery(".is-modal.footnote");
+            parent._cb.hideModal($modal);
+
+            parent._cb.settings.onRender();
+
+        });
+
+    });
+</script>
+</body>
+</html>
