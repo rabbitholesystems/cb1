@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="#" />
+
+    <link href="assets/minimalist-blocks/content.css" rel="stylesheet" type="text/css" />
+    <link href="contentbuilder/contentbuilder.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        body {background: #f4f4f4}
+		.book_page { margin: 120px auto;
+			max-width: 6.125in; width:100%;
+			padding:1in 1in; box-sizing: border-box;
+			box-shadow: 0 0 0 0.5px rgba(0,0,0,.3);
+			background:#fff;
+			overflow: hidden;
+			position: relative;
+		}
+        .container { margin: 0px; padding 0px; }
+    </style>
+</head>
+<body>
+
+<!-- This is just a sample content. Content can be loaded from a database. -->
+<div style="position:fixed;left: 20px;">
+	<div><label style='display:inline-block;width: 80px;'>Words:</label><span id="numofwords">0</span></div>
+	<div><label style='display:inline-block;width: 80px;'>Pages:</label><span id="numofpages">0</span></div>
+</div>
+
+<div class="book_page">
+	<div class="container">
+		<div class="row clearfix">
+			<div class="column full">
+				<div class="display">
+					<p class="size-18">A BEAUTIFUL DAY IN OCTOBER</p>
+					<h1 class="size-60">Time to think, time to create.</h1>
+				</div>
+				<p class="size-16">— By David Anderson</p>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="column full">
+				<div class="spacer height-60"></div>
+			</div>
+		</div>
+		<div class="row clearfix">
+				<div class="column full"><p style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
+		</div>
+		<div class="row clearfix">
+			<div class="column full">
+				<p style="text-align: justify;">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry
+						<sup class="footnote" data-footnote="Lorem%20Ipsum%20is%20simply%20dummy%20text%20of%20the%20printing%20and%20typesetting%20industry.%20Lorem%20Ipsum%20has%20been%20the%20industry's%20standard%20dummy%20text%20ever%20since%20the%201500s.%20Vivamus%20leo%20ante%2C%20consectetur%20sit%20amet%2C%20sit%20amet%20lectus.%20Lorem%20Ipsum%20is%20simply%20dummy%20text%20of%20the%20printing%20and%20typesetting%20industry.">1</sup>.
+					Lorem Ipsum is simply dummy text
+						<sup class="footnote" data-footnote="Lorem%20Ipsum%20is%20simply%20dummy%20text%20of%20the%20printing%20and%20typesetting%20industry.%20Lorem%20Ipsum%20has%20been%20the%20industry's%20standard%20dummy%20text%20ever%20since%20the%201500s.%20Vivamus%20leo%20ante%2C%20consectetur%20sit%20amet%2C%20sit%20amet%20lectus.%20Lorem%20Ipsum%20is%20simply%20dummy%20text%20of%20the%20printing%20and%20typesetting%20industry.">2</sup>.
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+				</p>
+			</div>
+		</div>
+		<div class="row clearfix">
+			<div class="column full">
+					<p style="text-align: justify;">
+					Lorem Ipsum is simply dummy text
+					<sup class="footnote" data-footnote="Lorem%20Ipsum%20is%20simply%20dummy%20text%20of%20the%20printing%20and%20typesetting%20industry.%20Lorem%20Ipsum%20has%20been%20the%20industry's%20standard%20dummy%20text%20ever%20since%20the%201500s.%20Vivamus%20leo%20ante%2C%20consectetur%20sit%20amet%2C%20sit%20amet%20lectus.%20Lorem%20Ipsum%20is%20simply%20dummy%20text%20of%20the%20printing%20and%20typesetting%20industry.">3</sup>.
+					Lorem Ipsum is simply dummy text
+						<sup class="footnote" data-footnote="Lorem%20Ipsum%20is%20simply%20dummy%20text%20of%20the%20printing%20and%20typesetting%20industry.%20Lorem%20Ipsum%20has%20been%20the%20industry's%20standard%20dummy%20text%20ever%20since%20the%201500s.%20Vivamus%20leo%20ante%2C%20consectetur%20sit%20amet%2C%20sit%20amet%20lectus.%20Lorem%20Ipsum%20is%20simply%20dummy%20text%20of%20the%20printing%20and%20typesetting%20industry.%20Lorem%20Ipsum%20has%20been%20the%20industry's%20standard%20dummy%20text%20ever%20since%20the%201500s.%20Vivamus%20leo%20ante%2C%20consectetur%20sit%20amet%2C%20sit%20amet%20lectus.">4</sup>.
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry
+						<sup class="footnote" data-footnote="Lorem%20Ipsum%20is%20simply%20dummy%20text%20of%20the%20printing%20and%20typesetting%20industry.%20Lorem%20Ipsum%20has%20been%20the%20industry's%20standard%20dummy%20text%20ever%20since%20the%201500s.%20Vivamus%20leo%20ante%2C%20consectetur%20sit%20amet%2C%20sit%20amet%20lectus.%20Lorem%20Ipsum%20is%20simply%20dummy%20text%20of%20the%20printing%20and%20typesetting%20industry.%20Lorem%20Ipsum%20has%20been%20the%20industry's%20standard%20dummy%20text%20ever%20since%20the%201500s.%20Vivamus%20leo%20ante%2C%20consectetur%20sit%20amet%2C%20sit%20amet%20lectus.">5</sup>.
+
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="contentbuilder/jquery.min.js" type="text/javascript"></script>
+<script src="contentbuilder/contentbuilder.min.js" type="text/javascript"></script>
+
+<!-- Optional: To enable drag & drop blocks -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+<script src="assets/minimalist-blocks/content.js" type="text/javascript"></script>
+<!-- /Optional -->
+
+<script type="text/javascript">
+
+	var BookArea = {
+
+		bookContainerSelector: ".book_page",
+		bookPageSize: {width: "588px", height: "888px"}, //6 1/8 inch x 9 1/4 inch and ppi=96
+		bookMargin: {top: "96px", right: "96px", bottom: "96px", left: "96px"}, // 1inch  and ppi=96
+
+		builder: null,
+
+		initBuilder: function() {
+
+			this.builder = $.contentbuilder({
+
+				container: ".container",
+				builderMode: 'minimal',
+				buttons: ["bold", "italic", "createLink", "footnote", "align", "color", "formatPara", "font", "formatting", "list", "textsettings", "tags", "removeFormat", "printpreview"],
+				buttonsMore: ["icon", "image", "html", "preferences"],
+				snippetPageSliding: false,
+				toolbarDisplay: "always",
+				scrollableEditingToolbar: false,
+				dragWithoutHandle: true,
+				animatedSorting: true,
+				elementTool: false,
+				addButtonPlacement: "between-blocks-center",
+				elementHighlight: true,
+				rowTool: "right",
+				columnTool: false,
+
+				//book plugin related settings.
+				bookContainer: BookArea.bookContainerSelector,
+				bookPageSize: BookArea.bookPageSize, //{width: "588px", height: "888px"}, //6 1/8 inch x 9 1/4 inch and ppi=96
+				bookMargin: BookArea.bookMargin, //{top: "96px", right: "96px", bottom: "96px", left: "96px"}, // 1inch  and ppi=96
+				bookShowPageBreakLine: false,
+				onWordsCount: function(wordsCount) { //requires bookwordcount plugin
+					if(wordsCount > 200) {
+						alert("200 words count limit reached, cannot save content...");
+					}
+					jQuery("#numofwords").html(wordsCount);
+					console.log(wordsCount);
+				},
+				onPagesCount: function(pagesCount) {
+					if(pagesCount > 5) {
+						alert("Max 5 pages count limit reached, cannot save content...");
+					}
+					jQuery("#numofpages").html(pagesCount);
+					console.log(pagesCount);
+				}
+
+			});
+
+		},
+
+
+	};
+
+    jQuery(document).ready(function ($) {
+
+		BookArea.initBuilder();
+
+        $('#btnViewSnippets').on('click', function () {
+            BookArea.builder.viewSnippets();
+        });
+
+        $('#btnViewHtml').on('click', function () {
+            BookArea.builder.viewHtml();
+        });
+
+    });
+</script>
+
+</body>
+</html>
